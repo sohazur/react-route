@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div>
-      <Link to="/about">About</Link>
       <p>This is Home</p>
     </div>
   );
