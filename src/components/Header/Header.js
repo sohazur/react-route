@@ -13,7 +13,24 @@ const Header = () => {
       >
         About
       </NavLink>
-      <NavLink to="/friends">Friends</NavLink>
+      <NavLink
+        to="/friends"
+        style={(isActive) => ({
+          color: isActive ? "green" : "blue",
+          fontWeight: "bold",
+        })}
+      >
+        Friends
+      </NavLink>
+      <NavLink
+        to="/about/culture"
+        style={(isActive) => ({
+          color: isActive ? "green" : "blue",
+          fontWeight: "bold",
+        })}
+      >
+        Culture
+      </NavLink>
     </div>
   );
 };
