@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Friend = (props) => {
   const { id, name, phone, website, address } = props.friend;
@@ -7,6 +7,10 @@ const Friend = (props) => {
     border: "3px solid goldenrod",
     padding: "10px",
     borderRadius: "10px",
+  };
+  const history = useNavigate();
+  const handleClick = () => {
+    history("/home");
   };
   return (
     <div style={friendStyle}>
@@ -17,6 +21,8 @@ const Friend = (props) => {
         <small>I live in: {address.city}</small>
       </p>
       <Link to={`/friend/${id}`}>Visit me</Link>
+      <br />
+      <button onClick={handleClick}>Home</button>
     </div>
   );
 };
